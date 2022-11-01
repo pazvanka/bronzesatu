@@ -1,0 +1,659 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Cinzel:wght@400;500;600;700;800;900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "Monoline";
+    font-display: swap;
+    src: url("../font/Monoline-Signature.otf") format("opentype")
+}
+
+:root {
+    --pz-white-color: #ffffff;
+    --pz-white-color-rgb: 255, 255, 255;
+
+    --pz-black-color: #000000;
+    --pz-black-color-rgb: 0, 0, 0;
+
+    --pz-secondary-color: #666666;
+    --pz-secondary-color-rgb: 102, 102, 102;
+
+    --pz-theme-color: #95A682;
+    --pz-theme-color-rgb: 147, 166, 130;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--pz-secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    margin-bottom: 0;
+}
+
+hr {
+    margin: 0;
+    opacity: 1;
+}
+
+.container,
+.container-fluid,
+.container-xxl,
+.container-xl,
+.container-lg,
+.container-md,
+.container-sm {
+    --bs-gutter-x: 2rem;
+}
+
+.primary-pane {
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 61%;
+    padding: 5rem 0;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)), url(../img/bronze-4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.primary-pane p {
+    font-size: 18px;
+    color: var(--pz-white-color);
+}
+
+.primary-pane h2 {
+    font-size: 20px;
+    color: var(--pz-white-color);
+}
+
+.primary-pane h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--pz-white-color);
+}
+
+.secondary-pane {
+    position: static;
+    right: 0;
+    background: var(--pz-white-color);
+    width: 39%;
+    margin-left: auto;
+}
+
+@media only screen and (max-width: 960px) {
+    .primary-pane {
+        position: relative;
+        width: 100%;
+        display: none;
+    }
+
+    .secondary-pane {
+        position: relative;
+        width: 100%;
+    }
+}
+
+/* --------------- Buttons ----------------- */
+.btn-theme {
+    --bs-btn-color: var(--pz-white-color);
+    --bs-btn-bg: var(--pz-theme-color);
+    --bs-btn-border-color: var(--pz-theme-color);
+    --bs-btn-hover-color: var(--pz-white-color);
+    --bs-btn-hover-bg: var(--pz-theme-color);
+    --bs-btn-hover-border-color: var(--pz-theme-color);
+    --bs-btn-focus-shadow-rgb: var(--pz-theme-color-rgb);
+    --bs-btn-active-color: var(--pz-white-color);
+    --bs-btn-active-bg: var(--pz-theme-color);
+    --bs-btn-active-border-color: var(--pz-theme-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(var(--pz-theme-color-rgb), 0.125);
+    --bs-btn-disabled-color: var(--pz-white-color);
+    --bs-btn-disabled-bg: var(--pz-theme-color);
+    --bs-btn-disabled-border-color: var(--pz-theme-color);
+}
+
+.btn-white {
+    --bs-btn-color: var(--pz-secondary-color);
+    --bs-btn-bg: var(--pz-white-color);
+    --bs-btn-border-color: var(--pz-white-color);
+    --bs-btn-hover-color: var(--pz-secondary-color);
+    --bs-btn-hover-bg: var(--pz-white-color);
+    --bs-btn-hover-border-color: var(--pz-white-color);
+    --bs-btn-focus-shadow-rgb: var(--pz-secondary-color-rgb);
+    --bs-btn-active-color: var(--pz-secondary-color);
+    --bs-btn-active-bg: var(--pz-white-color);
+    --bs-btn-active-border-color: var(--pz-white-color);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(var(--pz-secondary-color-rgb), 0.125);
+    --bs-btn-disabled-color: var(--pz-secondary-color);
+    --bs-btn-disabled-bg: var(--pz-white-color);
+    --bs-btn-disabled-border-color: var(--pz-white-color);
+}
+
+.btn-gift-icon {
+    --bs-btn-padding-y: 2px;
+    --bs-btn-padding-x: 10px;
+    --bs-btn-font-size: 2rem;
+}
+
+.btn-ig-icon {
+    --bs-btn-padding-y: .5px;
+    --bs-btn-padding-x: .4rem;
+    --bs-btn-font-size: 1.2rem;
+}
+
+.btn-volume {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: 20px;
+    border-radius: 50%;
+    transition: left 1s;
+    -webkit-transition: left 1s;
+}
+
+/* --------------- Form Focus ----------------- */
+.form-control:focus {
+    border-color: var(--pz-secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(var(--pz-secondary-color-rgb), 0.25);
+}
+
+.form-select:focus {
+    border-color: var(--pz-secondary-color);
+    box-shadow: 0 0 0 0.25rem rgba(var(--pz-secondary-color-rgb), 0.25);
+}
+
+.form-check-input:focus {
+    border-color: var(--pz-secondary-color);
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(var(--pz-secondary-color-rgb), 0.25);
+}
+
+.btn-close:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(var(--pz-secondary-color-rgb), 0.25);
+    opacity: 1;
+}
+
+/* --------------- Preloader ----------------- */
+.preloader {
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: rgba(255, 255, 255, 0.99)
+}
+
+.preloader .loading {
+    left: 50%;
+    top: 50%;
+    font-size: 22px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    letter-spacing: 4.4px;
+    text-transform: capitalize;
+    position: absolute;
+    overflow: hidden;
+    transform: translate(-50%, -60%);
+}
+
+.preloader .loading:before {
+    color: #aaa;
+    content: attr(data-loading-text);
+}
+
+.preloader .loading:after {
+    top: 0;
+    left: 0;
+    width: 0;
+    opacity: 1;
+    color: #192331;
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-loading-text);
+    -webkit-animation: loading 5s infinite;
+    animation: loading 5s infinite;
+}
+
+@-webkit-keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes loading {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* --------------- invitationModal ----------------- */
+#invitationModal .modal-content {
+    position: relative;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgba(0, 4, 10, 0.36) 68%, #000c0f 100%), url(../img/bronze-2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+#invitationModal .modal-body {
+    padding-top: 50px;
+    padding-bottom: 120px;
+    text-align: center;
+}
+
+#invitationModal .modal-body p {
+    font-size: 16px;
+    color: var(--pz-white-color);
+}
+
+#invitationModal .modal-body h2 {
+    font-size: 18px;
+    color: var(--pz-white-color);
+}
+
+#invitationModal .modal-body h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--pz-white-color);
+}
+
+/* --------------- App RSVP ----------------- */
+.app {
+    position: relative;
+    background-color: var(--pz-white-color);
+    padding: 2rem 0;
+    overflow: hidden;
+}
+
+.app .show-rsvp h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
+}
+
+.card-rsvp .card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 0;
+}
+
+.card-rsvp .card .finis-card-title {
+    background-color: var(--pz-white-color);
+    color: var(--pz-secondary-color);
+}
+
+.card-rsvp .card .finis-card-title p {
+    font-size: 14px;
+}
+
+.card-rsvp .card .finis-card-header {
+    background-color: var(--pz-theme-color);
+    color: var(--pz-white-color);
+}
+
+.card-rsvp .card .finis-card-header p {
+    font-size: 12px;
+}
+
+.card-rsvp .card .finis-card-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.card-rsvp .card .finis-card-body {
+    background-color: var(--pz-white-color);
+    color: var(--pz-secondary-color);
+}
+
+.card-rsvp .card .finis-card-body img {
+    width: 200px;
+    height: 200px;
+}
+
+.card-rsvp .card .finis-card-body p {
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+
+.card-rsvp .card .finis-card-body span {
+    font-size: 22px;
+}
+
+.card-rsvp .card .finis-card-body small {
+    font-size: 10px;
+}
+
+.card-rsvp .card .finis-card-footer {
+    background-color: var(--pz-theme-color);
+    color: var(--pz-white-color);
+}
+
+.card-rsvp .card .finis-card-footer p {
+    font-size: 12px;
+}
+
+.card-rsvp .card .finis-card-footer img {
+    height: 30px;
+}
+
+/* --------------- wedding gift ----------------- */
+.wedding-gift {
+    position: relative;
+    background-color: var(--pz-theme-color);
+    margin-top: -3px;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.wedding-gift .gift-title span {
+    font-size: 32px;
+    color: var(--pz-white-color);
+}
+
+.wedding-gift .gift-title h1 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: var(--pz-white-color);
+}
+
+.wedding-gift .gift-title p {
+    font-size: 14px;
+    color: var(--pz-white-color);
+}
+
+.wedding-gift .card {
+    background-color: transparent;
+    --bs-card-border-color: var(--pz-white-color);
+}
+
+#showGift p {
+    font-size: 16px;
+    color: var(--pz-white-color);
+}
+
+#showGift img {
+    width: 200px;
+    height: 200px;
+    color: var(--pz-white-color);
+}
+
+/* --------------- Wishes ----------------- */
+.wishes {
+    background-color: var(--pz-theme-color);
+    margin-top: -3px;
+    padding: 2rem 0;
+}
+
+.wishes .card {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.wishes .comment {
+    overflow: scroll;
+    overflow-x: hidden;
+    margin: 32px 0;
+    max-height: 80vh;
+}
+
+.wishes .card h2 {
+    font-family: 'Cinzel', serif;
+    font-size: 24px;
+    color: var(--pz-secondary-color);
+}
+
+.wishes h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--pz-white-color);
+}
+
+.wishes p {
+    font-size: 14px;
+    color: var(--pz-white-color);
+}
+
+.wishes .card p {
+    color: var(--pz-secondary-color);
+}
+
+.wishes .list-group-item {
+    padding: 0.5rem 0.75rem;
+    color: var(--pz-white-color);
+    background-color: transparent;
+    border: 0px;
+    margin-bottom: 12px;
+}
+
+.wishes .list-group-item h5 {
+    font-size: 16px;
+    color: var(--pz-white-color);
+    margin-bottom: 4px;
+}
+
+.wishes .list-group-item p {
+    font-size: 14px;
+    color: var(--pz-white-color);
+}
+
+/* --------------- Footer ----------------- */
+.page-footer {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pz-white-color);
+    padding: 12px 0;
+}
+
+.page-footer img {
+    height: 30px;
+}
+
+.page-footer p {
+    font-size: 12px;
+}
+
+/* --------------- Desain WEB ----------------- */
+
+.header {
+    position: relative;
+    background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 46%, rgba(10, 10, 10, 0.24) 100%), url(../img/bronze-1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.header-inner {
+    height: 94vh;
+    width: 100%;
+    padding-top: 50px;
+}
+
+.header-title {
+    padding: 30px 0;
+}
+
+.header-title p {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--pz-white-color);
+}
+
+.header-title h2 {
+    font-family: monoline;
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--pz-white-color);
+}
+
+.header-title h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    color: var(--pz-white-color);
+}
+
+.header-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-theme-color);
+}
+
+.about {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pz-theme-color);
+    margin-top: -3px;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.about img {
+    width: 80px;
+}
+
+.about p {
+    font-size: 14px;
+    color: var(--pz-white-color);
+}
+
+.about-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-white-color);
+}
+
+.couple {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pz-white-color);
+    margin-top: -3px;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.couple h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--pz-theme-color);
+}
+
+.couple h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 40px;
+    color: var(--pz-theme-color);
+}
+
+.couple p {
+    font-size: 14px;
+}
+
+.couple-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-theme-color);
+}
+
+.date-wedding {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pz-theme-color);
+    margin-top: -3px;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.date-wedding h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    color: var(--pz-white-color);
+}
+
+.date-wedding p {
+    font-size: 14px;
+    color: var(--pz-white-color);
+}
+
+.date-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-white-color);
+}
+
+.countdown {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pz-white-color);
+    margin-top: -3px;
+    padding-top: 2rem;
+    text-align: center;
+}
+
+.countdown .value {
+    font-size: 20px;
+    color: var(--pz-theme-color);
+    letter-spacing: 5px;
+}
+
+.countdown .label {
+    font-size: 14px;
+}
+
+.countdown h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--pz-theme-color);
+}
+
+.countdown-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-theme-color);
+}
+
+.gallery {
+    position: relative;
+    background-color: var(--pz-white-color);
+    margin-top: -3px;
+    padding-top: 2rem;
+    overflow: hidden;
+}
+
+.gallery h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    color: var(--pz-secondary-color);
+    text-align: center;
+}
+
+.gallery hr {
+    border-top-color: var(--pz-secondary-color);
+    border-top-width: 2px;
+    width: 30%;
+    margin: 1rem auto;
+}
+
+.gallery-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-theme-color);
+}
+
+.wedding-gift-waves {
+    width: 100%;
+    height: 50px;
+    fill: var(--pz-white-color);
+}
